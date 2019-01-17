@@ -1,0 +1,7 @@
+/mnt/c/Users/John/Desktop/FastQ-Pair/sandbox/fastq-pair_newbench/CMakeFiles/install/strip.dir
+/mnt/c/Users/John/Desktop/FastQ-Pair/sandbox/fastq-pair_newbench/CMakeFiles/edit_cache.dir
+/mnt/c/Users/John/Desktop/FastQ-Pair/sandbox/fastq-pair_newbench/CMakeFiles/fastq_pair.dir
+/mnt/c/Users/John/Desktop/FastQ-Pair/sandbox/fastq-pair_newbench/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/John/Desktop/FastQ-Pair/sandbox/fastq-pair_newbench/CMakeFiles/list_install_components.dir
+/mnt/c/Users/John/Desktop/FastQ-Pair/sandbox/fastq-pair_newbench/CMakeFiles/install/local.dir
+/mnt/c/Users/John/Desktop/FastQ-Pair/sandbox/fastq-pair_newbench/CMakeFiles/install.dir

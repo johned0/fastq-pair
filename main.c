@@ -3,14 +3,16 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <time.h>
 
 #include <sys/time.h>
 
+// Use clock_gettime() to avoid NTP problems
 long long get_time_ms()
 {
-    struct timeval te;
-    gettimeofday(&te, NULL);
-    long long milliseconds = te.tv_sec*1000LL + te.tv_usec/1000;
+    struct timespec te;
+    clock_gettime(CLOCK_MONOTONIC, &te);
+    long long milliseconds = te.tv_sec*1000LL + te.tv_nsec/1000000LL;
     return milliseconds;
 }
 

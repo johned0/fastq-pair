@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/fastq_pair.dir/main.c.o CMakeFiles/fastq_pair.dir/robstr.c.o CMakeFiles/fastq_pair.dir/fastq_pair.c.o  -o fastq_pair 
