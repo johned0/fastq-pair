@@ -32,6 +32,7 @@ int main(int argc, char* argv[]) {
     opt->tablesize = 100003;
     opt->print_table_counts = false;
     opt->verbose = false;
+    opt->benchmark = false;
     char *left_file = NULL;
     char *right_file = NULL;
 
@@ -43,6 +44,8 @@ int main(int argc, char* argv[]) {
             opt->tablesize = atoi(argv[++i]);
         else if (strcmp(argv[i], "-p") == 0)
             opt->print_table_counts = true;
+        else if (strcmp(argv[i], "-b") == 0)
+            opt->benchmark = true;
         else if (strcmp(argv[i], "-v") == 0)
             opt->verbose = true;
         else if (access(argv[i], F_OK) != -1 && left_file == NULL)
@@ -67,7 +70,7 @@ int main(int argc, char* argv[]) {
     start_time = get_time_ms();
     int success = pair_files(left_file, right_file, opt);
     end_time = get_time_ms();
-    if (opt->verbose)
+    if (opt->benchmark)
 	    printf ("Elapsed time = %lld (ms)\n", end_time - start_time - overhead_time);
 
     return success;
@@ -78,5 +81,6 @@ void help(char *s) {
     fprintf(stdout, "\nOPTIONS\n-t table size (default 100003)\n");
     fprintf(stdout, "-p print the number of elements in each bucket in the table\n");
     fprintf(stdout, "-v verbose output. This is mainly for debugging\n");
+    fprintf(stdout, "-b benchmark performance\n");
 
 }
